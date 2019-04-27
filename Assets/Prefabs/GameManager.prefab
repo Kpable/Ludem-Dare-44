@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1001085997736912892}
   - component: {fileID: 1001085997736912883}
   - component: {fileID: 1001085997736912882}
+  - component: {fileID: 734600125607089991}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001085997736912881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 988.76605, y: 452.2788, z: -206.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,3 +61,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doubleJumpEnabled: 0
   hoverEnabled: 0
+--- !u!114 &734600125607089991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001085997736912881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d290a57c65606914d91be2d0696d8cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

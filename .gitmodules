@@ -1,0 +1,3 @@
+[submodule "Assets/JamLib"]
+	path = Assets/JamLib
+	url = https://github.com/Kpable/JamLib.git

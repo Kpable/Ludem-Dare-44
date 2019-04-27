@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Lesther Test Scene/TestTitleScene.unity
     guid: 17840f956912dad49a9be78110ad6eb1
   - enabled: 1
-    path: Assets/Scenes/Lesther Test Scene/Test Scene 1.unity
+    path: Assets/Scenes/Lesther Test Scene/TestScene2.unity
     guid: d5787bc14c9db4e47bd4138d6504cec1
   m_configObjects: {}

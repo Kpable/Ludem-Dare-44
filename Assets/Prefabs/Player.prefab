@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 817494572525713376}
   - component: {fileID: 817494572525713377}
   - component: {fileID: 817494572525713378}
+  - component: {fileID: 9027447194035257508}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -160,3 +161,17 @@ MonoBehaviour:
   playerBody: {fileID: 817494572525713405}
   jumpSpeed: 50
   jumpSpeedDefault: 15
+--- !u!114 &9027447194035257508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817494572525713404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35f7f8fb11de564bb1f6c3d56b7e64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBody: {fileID: 817494572525713405}
+  hoverDuration: 2

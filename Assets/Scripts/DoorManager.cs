@@ -28,6 +28,8 @@ public class DoorManager : MonoBehaviour
             Debug.Log("Player has entered");
 
             powerManager.SubtractPower(1);
+
+            SceneTransitioner.Instance.NextScene();
         }
     }
 }

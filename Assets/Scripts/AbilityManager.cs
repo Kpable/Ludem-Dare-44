@@ -22,13 +22,27 @@ public class AbilityManager : MonoBehaviour
         
     }
 
-    public void SetDoubleJump(bool enabled)
+    public void ToggleDoubleJump()
     {
+        Debug.Log("Double Jump set to: " + !doubleJumpEnabled);
+        doubleJumpEnabled = !doubleJumpEnabled;
+    }
+
+    public void ToggleHover()
+    {
+        Debug.Log("Hover set to: " + !hoverEnabled);
+        hoverEnabled = !hoverEnabled;
+    }
+
+    public void ToggleDoubleJump(bool enabled)
+    {
+        Debug.Log("Double Jump set to: " + enabled);
         doubleJumpEnabled = enabled;
     }
 
-    public void SetHover(bool enabled)
+    public void ToggleHover(bool enabled)
     {
+        Debug.Log("Hover set to: " + enabled);
         hoverEnabled = enabled;
     }
 

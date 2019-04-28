@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1001085997736912883}
   - component: {fileID: 1001085997736912882}
   - component: {fileID: 734600125607089991}
+  - component: {fileID: 3413537083579552152}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -56,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1001085997736912881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 307fcf4593bb4a54daa408948e2ff9ad, type: 3}
+  m_Script: {fileID: 11500000, guid: e91aa8a24b5cdd343a37c4409f31a177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doubleJumpEnabled: 0
@@ -73,3 +74,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d290a57c65606914d91be2d0696d8cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3413537083579552152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001085997736912881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf768e8d126280f40a6de1226c18f613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryText: {fileID: 0}

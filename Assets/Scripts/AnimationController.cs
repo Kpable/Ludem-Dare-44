@@ -7,6 +7,9 @@ public class AnimationController : MonoBehaviour
     Animator animator;
     BasicMovement basicMovement;
 
+    bool lastMovingState = false;
+    bool lastIsOnGroundState = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +21,19 @@ public class AnimationController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        
+        if(basicMovement.IsOnGround != lastIsOnGroundState)
+        {
+            lastIsOnGroundState = basicMovement.IsOnGround;
+            if (!lastIsOnGroundState) animator.SetTrigger("Jump");
+            animator.SetBool("IsOnGround", lastIsOnGroundState);
+        }
+
+        if (basicMovement.IsMoving != lastMovingState)
+        {
+            lastMovingState = basicMovement.IsMoving;
+            animator.SetBool("IsMoving", lastMovingState);
+        }
     }
 }

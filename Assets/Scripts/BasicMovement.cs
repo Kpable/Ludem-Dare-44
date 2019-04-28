@@ -11,12 +11,15 @@ public class BasicMovement : MonoBehaviour
     public float speed;
     
     public bool IsOnGround { get; set; }
+    public bool IsMoving { get; set; }
 
+    private float xScale;
     // Start is called before the first frame update
     void Start()
     {
         speed = 10f;
         playerBody.freezeRotation = true;
+        xScale = transform.localScale.x;
     }
 
     
@@ -27,13 +30,17 @@ public class BasicMovement : MonoBehaviour
         {
             var newVelocity = playerBody.transform.right * speed;
             playerBody.velocity = new Vector2(newVelocity.x, playerBody.velocity.y);
+            transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             var newVelocity = playerBody.transform.right * speed * -1;
             playerBody.velocity = new Vector2(newVelocity.x, playerBody.velocity.y);
+            transform.localScale = new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
         }
+
+        IsMoving = playerBody.velocity.magnitude != 0;
     }
 
     private void CheckGroundCondition()

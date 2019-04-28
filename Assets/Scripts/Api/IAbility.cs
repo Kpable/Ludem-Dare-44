@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Api
 {
-    interface IAbility
+    [SerializeField]
+    public interface IAbility
     {
         /// <summary>
         /// Whether or not the ability can be activated
@@ -19,5 +21,10 @@ namespace Assets.Scripts.Api
         bool ActiveAbility { get; set; }
 
         void Activate();
+
+        /// <summary>
+        /// Clock for timing within this ability
+        /// </summary>
+        float Clock { get; set; }
     }
 }

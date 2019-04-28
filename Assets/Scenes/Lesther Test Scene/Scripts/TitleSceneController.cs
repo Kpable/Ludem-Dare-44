@@ -18,7 +18,7 @@ public class TitleSceneController : MonoBehaviour
 
     public void HandlePlayButtonPressed()
     {
-        SceneTransitioner.Instance.TransitionToScene(1);
+        SceneTransitioner.Instance.NextScene();
     }
 
     public void HandleReturnToTitlePressed()

@@ -9,6 +9,9 @@ namespace Assets.Scripts.Api
 {
     public class BaseAbility : MonoBehaviour, IAbility
     {
+        public BasicMovement playerMovement;
+        public Rigidbody2D playerBody;
+
         /// <summary>
         /// Whether or not the ability can be activated
         /// </summary>

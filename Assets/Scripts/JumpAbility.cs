@@ -6,58 +6,43 @@ using UnityEngine;
 
 public class JumpAbility : BaseAbility
 {
-    private Vector2 CAP_VELOCITY = new Vector2(0, 30);
-
-    public Rigidbody2D playerBody;
     public float jumpSpeed;
     public float jumpSpeedDefault = 15; // The jump speed is set to this on Start
 
-    public int JumpsLeft { get; set; }
+    protected Vector2 CAP_VELOCITY = new Vector2(0, 30);
 
-    public bool DoubleJumpEnabled { get; set; }
-
-    /// <summary>
-    ///  Enable/Disables the Double Jump Ability
-    /// </summary>
-    public bool Enable
+    public JumpAbility()
     {
-        get
-        {
-            return DoubleJumpEnabled;
-        }
-        set
-        {
-            DoubleJumpEnabled = value;
-        }
+        jumpSpeed = jumpSpeedDefault;
     }
-
 
     // Start is called before the first frame update    
     void Start()
     {
         Enabled = true;
-        jumpSpeed = jumpSpeedDefault;
-        JumpsLeft = 2;
-        DoubleJumpEnabled = true;
     }
 
     public override void SubActivate()
     {
+        Debug.Log(string.Format("Jump SubActivate - on ground = {0}", playerMovement.IsOnGround));
         ActiveAbility = true;
-        Vector2 pVelocity = playerBody.velocity;
-        if (pVelocity.y > CAP_VELOCITY.y)
+        if (playerMovement.IsOnGround)
         {
-            playerBody.velocity += CAP_VELOCITY;
-        }
-        else
-        {
-            if(playerBody.velocity.y <= 0)
+            Vector2 pVelocity = playerBody.velocity;
+            if (pVelocity.y > CAP_VELOCITY.y)
             {
-                playerBody.velocity = new Vector2(playerBody.velocity.x, jumpSpeed) ;
+                playerBody.velocity += CAP_VELOCITY;
             }
             else
             {
-                playerBody.velocity += Vector2.up * jumpSpeed;
+                if(playerBody.velocity.y <= 0)
+                {
+                    playerBody.velocity = new Vector2(playerBody.velocity.x, jumpSpeed) ;
+                }
+                else
+                {
+                    playerBody.velocity += Vector2.up * jumpSpeed;
+                }
             }
         }
         ActiveAbility = false;

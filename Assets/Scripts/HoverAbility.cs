@@ -6,8 +6,6 @@ namespace Assets.Scripts.Api
 { 
     public class HoverAbility : BaseAbility
     {
-        public Rigidbody2D playerBody;
-
         private bool hover = false;
         private bool canHover = true;
         private float originalGravityScale;
@@ -29,14 +27,17 @@ namespace Assets.Scripts.Api
 
         public override void SubActivate()
         {
-            if (hover && canHover)
+            if(playerMovement.IsOnGround == false)
             {
-                StartCoroutine("HoverCoroutine");
-                hover = canHover = false;
-            }
-            else
-            {
-                canHover = true;
+                if (hover && canHover)
+                {
+                    StartCoroutine("HoverCoroutine");
+                    hover = canHover = false;
+                }
+                else
+                {
+                    canHover = true;
+                }
             }
         }
 

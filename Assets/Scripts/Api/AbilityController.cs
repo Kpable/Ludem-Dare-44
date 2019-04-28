@@ -7,9 +7,11 @@ public class AbilityController : MonoBehaviour
 {
 
     public GameObject playerObj;
+    public BasicMovement playerMovement;
     private Dictionary<IAbility, float> clocks; // dict of clocks associated with the ability
 
     JumpAbility jumpAbility;
+    DoubleJumpAbility doubleJumpAbility;
     HoverAbility hoverAbility;
 
     // Start is called before the first frame update
@@ -23,6 +25,7 @@ public class AbilityController : MonoBehaviour
 
 
         jumpAbility = playerObj.GetComponent<JumpAbility>();
+        doubleJumpAbility = playerObj.GetComponent<DoubleJumpAbility>();
         hoverAbility = playerObj.GetComponent<HoverAbility>();
     }
 
@@ -34,28 +37,8 @@ public class AbilityController : MonoBehaviour
         {
             if(hoverAbility.ActiveAbility == false)
             {
-                if (jumpAbility.Clock <= 0 || jumpAbility.JumpsLeft > 0)
-                {
-                    jumpAbility.Activate();
-                    jumpAbility.Clock = jumpAbility.DoubleJumpEnabled ? 3f : 1f;
-                }
-
-                if (jumpAbility.DoubleJumpEnabled)
-                {
-                    if (jumpAbility.JumpsLeft > 0)
-                    {
-                        jumpAbility.JumpsLeft -= 1; // Remove a jump from count
-                    }
-                    else
-                    {
-                        jumpAbility.Clock -= Time.deltaTime;
-                        jumpAbility.JumpsLeft = 2;
-                    }
-                }
-                else
-                {
-                    jumpAbility.Clock -= Time.deltaTime;
-                }
+                jumpAbility.Activate();
+                doubleJumpAbility.Activate();
             }
         }
         

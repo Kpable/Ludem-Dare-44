@@ -5,12 +5,17 @@ using UnityEngine;
 public class DoorManager : MonoBehaviour
 {
     private PowerManager powerManager;
+    private DiagnosticsController diagnosticsController;
 
     // Start is called before the first frame update
     void Start()
     {
         var go = GameObject.Find("GameManager");
-        if (go != null) powerManager = go.GetComponent<PowerManager>();
+        if (go != null)
+        {
+            powerManager = go.GetComponent<PowerManager>();
+            diagnosticsController = go.GetComponent<DiagnosticsController>();
+        }
         else Debug.LogWarning("Unable to find GameManager");
         if (!powerManager) Debug.LogWarning("Unable to find component PowerManager");
     }
@@ -28,6 +33,7 @@ public class DoorManager : MonoBehaviour
             Debug.Log("Player has entered");
 
             powerManager.SubtractPower(1);
+            diagnosticsController.SetSceneLoadState(false);
 
             SceneTransitioner.Instance.NextScene();
         }

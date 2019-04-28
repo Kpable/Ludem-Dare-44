@@ -15,7 +15,7 @@ public class ResetScene : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            // Todo reset did diagnostics contrller flag
+            GetComponent<DiagnosticsController>().SetSceneLoadState(true);
             SceneTransitioner.Instance.RestartScene();
         }
     }

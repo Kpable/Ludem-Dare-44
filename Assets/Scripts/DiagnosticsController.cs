@@ -11,7 +11,8 @@ public class DiagnosticsController : MonoBehaviour
     AbilityManager abManager;
     PowerManager pwManager;
     public TMP_Text batteryText;
-    GameObject diagnosticsCanvas;
+    public GameObject diagnosticsCanvas;
+    public static bool bringUpDiagnosticsOnLoad = true;
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +38,18 @@ public class DiagnosticsController : MonoBehaviour
             UpdateBattery();
         }
 
-        diagnosticsCanvas = GameObject.Find("Diagnostics");
+
+        //diagnosticsCanvas = GameObject.Find("Diagnostics");
         if( !diagnosticsCanvas)
         {
             Debug.LogError("Diagnostics Controller: Failed to find Diagnostics canvas ");
         }
+
+        if (bringUpDiagnosticsOnLoad)
+        {
+            EnableDiagnostics();
+        }
+        bringUpDiagnosticsOnLoad = false;
     }
 
     // Update is called once per frame
@@ -110,6 +118,11 @@ public class DiagnosticsController : MonoBehaviour
     public void DisableDiagnostics()
     {
         diagnosticsCanvas.SetActive(false);
+    }
+
+    public void SetSceneLoadState(bool newState)
+    {
+        bringUpDiagnosticsOnLoad = newState;
     }
 
 }

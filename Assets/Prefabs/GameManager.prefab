@@ -71,8 +71,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf768e8d126280f40a6de1226c18f613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batteryText: {fileID: 0}
+  batteryGroup: {fileID: 0}
   diagnosticsCanvas: {fileID: 0}
+  batterySprites:
+  - {fileID: -598646941475872154, guid: 9112bd634cc4cd440be105dbd14d3df8, type: 3}
+  - {fileID: 2923700797827528709, guid: 9112bd634cc4cd440be105dbd14d3df8, type: 3}
+  - {fileID: 592112613293883888, guid: 9112bd634cc4cd440be105dbd14d3df8, type: 3}
+  - {fileID: -1720865232835478159, guid: 9112bd634cc4cd440be105dbd14d3df8, type: 3}
+  - {fileID: -3017979480325208809, guid: 9112bd634cc4cd440be105dbd14d3df8, type: 3}
 --- !u!114 &99927302
 MonoBehaviour:
   m_ObjectHideFlags: 0

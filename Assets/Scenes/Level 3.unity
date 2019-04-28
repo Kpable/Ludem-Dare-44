@@ -339,6 +339,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 491aa98d90305864f86310cd5af4c760, type: 3}
+--- !u!114 &158779624 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 876374814534346257, guid: 491aa98d90305864f86310cd5af4c760,
+    type: 3}
+  m_PrefabInstance: {fileID: 158779623}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a833522791364841b40198f5b35a5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &158779626 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7217478437098618034, guid: 491aa98d90305864f86310cd5af4c760,
@@ -1791,6 +1803,10 @@ PrefabInstance:
       propertyPath: opticsAbility
       value: 
       objectReference: {fileID: 158779626}
+    - target: {fileID: 99927302, guid: 7707da07db930ff4daf85d23163fcc9d, type: 3}
+      propertyPath: loseMotorControlAbility
+      value: 
+      objectReference: {fileID: 158779624}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7707da07db930ff4daf85d23163fcc9d, type: 3}
 --- !u!114 &1746312920 stripped

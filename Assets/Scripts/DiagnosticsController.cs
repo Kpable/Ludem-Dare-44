@@ -12,10 +12,13 @@ public class DiagnosticsController : MonoBehaviour
 
     AbilityManager abManager;
     PowerManager pwManager;
-    public TMP_Text batteryText;
+    public GameObject batteryGroup;
+    TMP_Text batteryText;
+    Image batteryImage;
     public GameObject diagnosticsCanvas;
     public static bool bringUpDiagnosticsOnLoad = true;
     List<Toggle> toggleList;
+    public Sprite[] batterySprites;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,9 @@ public class DiagnosticsController : MonoBehaviour
         {
             Debug.LogError("Diagnostics Controller: Failed to load power manager. ");
         }
+
+        batteryText = batteryGroup.GetComponentInChildren<TMP_Text>();
+        batteryImage = batteryGroup.GetComponentInChildren<Image>();
 
         if (!batteryText)
         {
@@ -82,6 +88,8 @@ public class DiagnosticsController : MonoBehaviour
         // Update Graphic on battery
         batteryText.text = "Reserve Power Remaining: " + currentPower + " / " + maxPower;
 
+        Debug.Log(currentPower);
+        batteryImage.sprite = batterySprites[currentPower];
 
         foreach(Toggle tog in toggleList)
         {

@@ -93,3 +93,4 @@ MonoBehaviour:
   hoverAbility: {fileID: 0}
   doubleJumpAbility: {fileID: 0}
   opticsAbility: {fileID: 0}
+  loseMotorControlAbility: {fileID: 0}

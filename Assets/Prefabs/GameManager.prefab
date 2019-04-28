@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1001085997736912892}
   - component: {fileID: 1001085997736912883}
-  - component: {fileID: 1001085997736912882}
   - component: {fileID: 734600125607089991}
   - component: {fileID: 3413537083579552152}
+  - component: {fileID: 99927302}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,20 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPower: 2
   maxPower: 2
---- !u!114 &1001085997736912882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001085997736912881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e91aa8a24b5cdd343a37c4409f31a177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleJumpEnabled: 0
-  hoverEnabled: 0
 --- !u!114 &734600125607089991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,3 +73,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batteryText: {fileID: 0}
+  diagnosticsCanvas: {fileID: 0}
+--- !u!114 &99927302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001085997736912881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91aa8a24b5cdd343a37c4409f31a177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doubleJumpEnabled: 0
+  hoverEnabled: 0

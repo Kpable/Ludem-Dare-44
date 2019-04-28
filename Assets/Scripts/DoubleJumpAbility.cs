@@ -10,13 +10,11 @@ public class DoubleJumpAbility : JumpAbility
     // Start is called before the first frame update
     void Start()
     {
-        Enabled = true;
     }
 
     // Update is called once per frame
     public override void SubActivate()
     {
-        Debug.Log(string.Format("DoubleJump SubActivate - on ground = {0}", playerMovement.IsOnGround));
         ActiveAbility = true;
         if (playerMovement.IsOnGround == false)
         {

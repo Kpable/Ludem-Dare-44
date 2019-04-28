@@ -19,12 +19,10 @@ public class JumpAbility : BaseAbility
     // Start is called before the first frame update    
     void Start()
     {
-        Enabled = true;
     }
 
     public override void SubActivate()
     {
-        Debug.Log(string.Format("Jump SubActivate - on ground = {0}", playerMovement.IsOnGround));
         ActiveAbility = true;
         if (playerMovement.IsOnGround)
         {

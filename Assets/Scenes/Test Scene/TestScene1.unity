@@ -472,44 +472,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1602974262 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 817494572525713404, guid: 491aa98d90305864f86310cd5af4c760,
-    type: 3}
-  m_PrefabInstance: {fileID: 817494573999118160}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1602974265 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 817494572525713377, guid: 491aa98d90305864f86310cd5af4c760,
-    type: 3}
-  m_PrefabInstance: {fileID: 817494573999118160}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602974262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 144556f0a044b2b4c930a824819b8552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &1602974267 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 817494572525713376, guid: 491aa98d90305864f86310cd5af4c760,
-    type: 3}
-  m_PrefabInstance: {fileID: 817494573999118160}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1602974269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602974262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01953f1fd59f5ab428494ac3a6ce722c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerObj: {fileID: 1602974262}
-  playerMovement: {fileID: 1602974265}
 --- !u!1001 &1651472549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -828,31 +790,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 817494572525713377, guid: 491aa98d90305864f86310cd5af4c760,
-        type: 3}
-      propertyPath: playerCollider
-      value: 
-      objectReference: {fileID: 1602974267}
-    - target: {fileID: 817494572525713378, guid: 491aa98d90305864f86310cd5af4c760,
-        type: 3}
-      propertyPath: playerMovement
-      value: 
-      objectReference: {fileID: 1602974265}
-    - target: {fileID: 817494572525713378, guid: 491aa98d90305864f86310cd5af4c760,
-        type: 3}
-      propertyPath: jumpSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 9027447194035257508, guid: 491aa98d90305864f86310cd5af4c760,
-        type: 3}
-      propertyPath: playerMovement
-      value: 
-      objectReference: {fileID: 1602974265}
-    - target: {fileID: 6431943131028001449, guid: 491aa98d90305864f86310cd5af4c760,
-        type: 3}
-      propertyPath: jumpSpeed
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 491aa98d90305864f86310cd5af4c760, type: 3}

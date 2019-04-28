@@ -15,7 +15,6 @@ namespace Assets.Scripts.Api
         // Start is called before the first frame update
         void Start()
         {
-            Enabled = true;
             originalGravityScale = playerBody.gravityScale;
         }
 

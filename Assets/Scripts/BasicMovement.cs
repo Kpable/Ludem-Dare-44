@@ -53,7 +53,6 @@ public class BasicMovement : MonoBehaviour
         {
             if(ray.collider.tag == "platform")
             {   
-                Debug.Log("Found Platform");
                 hasPlatform = true;
             }
         }

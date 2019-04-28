@@ -33,7 +33,7 @@ public class AbilityController : MonoBehaviour
     void Update()
     {
         // ---- JUMP ----
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             if(hoverAbility.ActiveAbility == false)
             {

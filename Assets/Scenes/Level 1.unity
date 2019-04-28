@@ -216,12 +216,12 @@ PrefabInstance:
     - target: {fileID: 817494572525713407, guid: 491aa98d90305864f86310cd5af4c760,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.68
+      value: -6.200001
       objectReference: {fileID: 0}
     - target: {fileID: 817494572525713407, guid: 491aa98d90305864f86310cd5af4c760,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: -0.27999997
       objectReference: {fileID: 0}
     - target: {fileID: 817494572525713407, guid: 491aa98d90305864f86310cd5af4c760,
         type: 3}
@@ -737,6 +737,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &277634549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7369881239949964364, guid: fbe820983a419424198537db77118f88,
+    type: 3}
+  m_PrefabInstance: {fileID: 277634547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &291187860
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,12 +875,12 @@ PrefabInstance:
     - target: {fileID: 3212754000804123698, guid: 9d6f1a488911dc94ba7c7aedd4c8f58f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 2.48
       objectReference: {fileID: 0}
     - target: {fileID: 3212754000804123698, guid: 9d6f1a488911dc94ba7c7aedd4c8f58f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: 3212754000804123698, guid: 9d6f1a488911dc94ba7c7aedd4c8f58f,
         type: 3}
@@ -1707,16 +1713,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batteryText
-      value: 
-      objectReference: {fileID: 277634548}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: diagnosticsCanvas
-      value: 
-      objectReference: {fileID: 1418087031}
     - target: {fileID: 1001085997736912892, guid: 7707da07db930ff4daf85d23163fcc9d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1772,6 +1768,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
+        type: 3}
+      propertyPath: batteryText
+      value: 
+      objectReference: {fileID: 277634548}
+    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
+        type: 3}
+      propertyPath: diagnosticsCanvas
+      value: 
+      objectReference: {fileID: 1418087031}
+    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
+        type: 3}
+      propertyPath: batteryGroup
+      value: 
+      objectReference: {fileID: 277634549}
     - target: {fileID: 99927302, guid: 7707da07db930ff4daf85d23163fcc9d, type: 3}
       propertyPath: jumpAbility
       value: 
@@ -2131,12 +2142,12 @@ PrefabInstance:
     - target: {fileID: 3212754000804123698, guid: 9d6f1a488911dc94ba7c7aedd4c8f58f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.62
+      value: 14.41
       objectReference: {fileID: 0}
     - target: {fileID: 3212754000804123698, guid: 9d6f1a488911dc94ba7c7aedd4c8f58f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.31
+      value: 10.16
       objectReference: {fileID: 0}
     - target: {fileID: 3212754000804123698, guid: 9d6f1a488911dc94ba7c7aedd4c8f58f,
         type: 3}
@@ -2357,7 +2368,7 @@ PrefabInstance:
     - target: {fileID: 3212754000804123698, guid: 9d6f1a488911dc94ba7c7aedd4c8f58f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.26
+      value: 19.26
       objectReference: {fileID: 0}
     - target: {fileID: 3212754000804123698, guid: 9d6f1a488911dc94ba7c7aedd4c8f58f,
         type: 3}
@@ -2444,12 +2455,12 @@ PrefabInstance:
     - target: {fileID: 7741285437061037506, guid: 9908b85ae0fe03647a63f1ec550b4707,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.62
+      value: 14.41
       objectReference: {fileID: 0}
     - target: {fileID: 7741285437061037506, guid: 9908b85ae0fe03647a63f1ec550b4707,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.31
+      value: 12.16
       objectReference: {fileID: 0}
     - target: {fileID: 7741285437061037506, guid: 9908b85ae0fe03647a63f1ec550b4707,
         type: 3}

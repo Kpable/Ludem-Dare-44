@@ -873,6 +873,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 500404905}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &500404908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7369881239949964364, guid: fbe820983a419424198537db77118f88,
+    type: 3}
+  m_PrefabInstance: {fileID: 500404905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &693520588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1722,16 +1728,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batteryText
-      value: 
-      objectReference: {fileID: 500404906}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: diagnosticsCanvas
-      value: 
-      objectReference: {fileID: 500404907}
     - target: {fileID: 1001085997736912892, guid: 7707da07db930ff4daf85d23163fcc9d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1787,6 +1783,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
+        type: 3}
+      propertyPath: batteryText
+      value: 
+      objectReference: {fileID: 500404906}
+    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
+        type: 3}
+      propertyPath: diagnosticsCanvas
+      value: 
+      objectReference: {fileID: 500404907}
+    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
+        type: 3}
+      propertyPath: batteryGroup
+      value: 
+      objectReference: {fileID: 500404908}
     - target: {fileID: 99927302, guid: 7707da07db930ff4daf85d23163fcc9d, type: 3}
       propertyPath: jumpAbility
       value: 

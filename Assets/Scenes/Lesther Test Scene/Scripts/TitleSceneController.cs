@@ -18,6 +18,7 @@ public class TitleSceneController : MonoBehaviour
 
     public void HandlePlayButtonPressed()
     {
+        Debug.Log("Here");
         SceneTransitioner.Instance.NextScene();
     }
 

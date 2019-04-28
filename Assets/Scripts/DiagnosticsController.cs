@@ -62,7 +62,7 @@ public class DiagnosticsController : MonoBehaviour
         {
             EnableDiagnostics();
         }
-        bringUpDiagnosticsOnLoad = false;
+        bringUpDiagnosticsOnLoad = true;
 
         foreach ( GameObject tog in GameObject.FindGameObjectsWithTag("Toggle"))
         {

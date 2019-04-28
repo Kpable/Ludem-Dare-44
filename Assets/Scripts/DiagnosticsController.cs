@@ -66,7 +66,10 @@ public class DiagnosticsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            bringUpDiagnosticsOnLoad = true;
+        }
     }
 
     public void UpdateBattery()

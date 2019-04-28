@@ -58,4 +58,9 @@ public class PowerManager : MonoBehaviour
             maxPower = amount;
         }
     }
+
+    public void PayPowerToll()
+    {
+        SetMaxPower(maxPower - 1);
+    }
 }

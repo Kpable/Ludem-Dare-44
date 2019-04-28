@@ -57,10 +57,9 @@ public class DiagnosticsController : MonoBehaviour
         }
         bringUpDiagnosticsOnLoad = false;
 
-        foreach( GameObject tog in GameObject.FindGameObjectsWithTag("Toggle"))
+        foreach ( GameObject tog in GameObject.FindGameObjectsWithTag("Toggle"))
         {
             toggleList.Add(tog.GetComponent<Toggle>());
-            Debug.Log(tog.name);
         }
     }
 

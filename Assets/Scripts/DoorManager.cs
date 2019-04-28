@@ -30,10 +30,8 @@ public class DoorManager : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Player has entered");
-
-            powerManager.SubtractPower(1);
-            diagnosticsController.SetSceneLoadState(false);
+            powerManager.PayPowerToll();
+            diagnosticsController.SetSceneLoadState(true);
 
             SceneTransitioner.Instance.NextScene();
         }

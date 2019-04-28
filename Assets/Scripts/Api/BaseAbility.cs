@@ -19,6 +19,8 @@ namespace Assets.Scripts.Api
         /// </summary>
         public bool ActiveAbility { get; set; }
 
+        public float Clock { get; set; }
+
         public BaseAbility()
         {
             ActiveAbility = false;
@@ -32,6 +34,9 @@ namespace Assets.Scripts.Api
             }
         }
 
+        /// <summary>
+        /// This is called within a FixedUpdate function from the controller
+        /// </summary>
         virtual public void SubActivate()
         {
             throw new NotImplementedException("Sub Abilities should override this function");

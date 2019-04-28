@@ -74,8 +74,10 @@ public class DiagnosticsController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Escape))
         {
+            pwManager.SetMaxPower(4);
             bringUpDiagnosticsOnLoad = true;
             SceneTransitioner.Instance.TransitionToScene(0);
+
         }
     }
 

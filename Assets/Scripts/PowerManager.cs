@@ -6,7 +6,7 @@ public class PowerManager : MonoBehaviour
 {
     // Power Params
     public int currentPower = 2;
-    public int maxPower = 2;
+    static public int maxPower = 2;
 
     // Start is called before the first frame update
     void Start()

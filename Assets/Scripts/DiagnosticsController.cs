@@ -119,7 +119,7 @@ public class DiagnosticsController : MonoBehaviour
                 abManager.ToggleOptics();
                 break;
             case ToggleType.Motor:
-                //abManager.ToggleMotor();
+                abManager.ToggleMotor();
                 break;
         }
 

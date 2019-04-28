@@ -1024,11 +1024,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1746312920}
-    - target: {fileID: 7369881240674907585, guid: fbe820983a419424198537db77118f88,
-        type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 1945857895}
     - target: {fileID: 3188364862527071377, guid: fbe820983a419424198537db77118f88,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1135,11 +1130,6 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1746312920}
-    - target: {fileID: 2891157019783763480, guid: fbe820983a419424198537db77118f88,
-        type: 3}
-      propertyPath: m_IsOn
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2639260011193319403, guid: fbe820983a419424198537db77118f88,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1162,18 +1152,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbe820983a419424198537db77118f88, type: 3}
---- !u!114 &1213988451 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7369881239453442356, guid: fbe820983a419424198537db77118f88,
-    type: 3}
-  m_PrefabInstance: {fileID: 1213988450}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1215193506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1703,94 +1681,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
         type: 3}
-      propertyPath: batteryCells.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batterySprites.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batteryText
-      value: 
-      objectReference: {fileID: 1213988451}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: diagnosticsCanvas
-      value: 
-      objectReference: {fileID: 1160379212}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batteryCells.Array.data[0]
-      value: 
-      objectReference: {fileID: -598646941475872154, guid: 9112bd634cc4cd440be105dbd14d3df8,
-        type: 3}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batteryCells.Array.data[1]
-      value: 
-      objectReference: {fileID: 2923700797827528709, guid: 9112bd634cc4cd440be105dbd14d3df8,
-        type: 3}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batteryCells.Array.data[2]
-      value: 
-      objectReference: {fileID: 592112613293883888, guid: 9112bd634cc4cd440be105dbd14d3df8,
-        type: 3}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batteryCells.Array.data[3]
-      value: 
-      objectReference: {fileID: -1720865232835478159, guid: 9112bd634cc4cd440be105dbd14d3df8,
-        type: 3}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batteryCells.Array.data[4]
-      value: 
-      objectReference: {fileID: -3017979480325208809, guid: 9112bd634cc4cd440be105dbd14d3df8,
-        type: 3}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batteryObj
-      value: 
-      objectReference: {fileID: 719685853}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
       propertyPath: batteryGroup
       value: 
       objectReference: {fileID: 719685853}
     - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
         type: 3}
-      propertyPath: batterySprites.Array.data[0]
+      propertyPath: diagnosticsCanvas
       value: 
-      objectReference: {fileID: -598646941475872154, guid: 9112bd634cc4cd440be105dbd14d3df8,
-        type: 3}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batterySprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 2923700797827528709, guid: 9112bd634cc4cd440be105dbd14d3df8,
-        type: 3}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batterySprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 592112613293883888, guid: 9112bd634cc4cd440be105dbd14d3df8,
-        type: 3}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batterySprites.Array.data[3]
-      value: 
-      objectReference: {fileID: -1720865232835478159, guid: 9112bd634cc4cd440be105dbd14d3df8,
-        type: 3}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batterySprites.Array.data[4]
-      value: 
-      objectReference: {fileID: -3017979480325208809, guid: 9112bd634cc4cd440be105dbd14d3df8,
-        type: 3}
+      objectReference: {fileID: 1160379212}
     - target: {fileID: 99927302, guid: 7707da07db930ff4daf85d23163fcc9d, type: 3}
       propertyPath: jumpAbility
       value: 
@@ -1981,18 +1879,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1215193506}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1945857895 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7369881240674907584, guid: fbe820983a419424198537db77118f88,
-    type: 3}
-  m_PrefabInstance: {fileID: 1213988450}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1984124794
 PrefabInstance:
   m_ObjectHideFlags: 0

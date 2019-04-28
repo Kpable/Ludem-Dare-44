@@ -13,6 +13,8 @@ public class AbilityController : MonoBehaviour
     JumpAbility jumpAbility;
     DoubleJumpAbility doubleJumpAbility;
     HoverAbility hoverAbility;
+    MotorControlDisAbility motorControlAbility;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class AbilityController : MonoBehaviour
         jumpAbility = playerObj.GetComponent<JumpAbility>();
         doubleJumpAbility = playerObj.GetComponent<DoubleJumpAbility>();
         hoverAbility = playerObj.GetComponent<HoverAbility>();
+        motorControlAbility = playerObj.GetComponent<MotorControlDisAbility>();
     }
 
     // Update is called once per frame
@@ -50,5 +53,8 @@ public class AbilityController : MonoBehaviour
             hoverAbility.StartHover();
             hoverAbility.Activate();
         }
+
+        // ---- MOTOR CONTROL ----
+        motorControlAbility.Activate();
     }
 }

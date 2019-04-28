@@ -105,7 +105,7 @@ public class DiagnosticsController : MonoBehaviour
                 abManager.ToggleHover();
                 break;
             case ToggleType.Optics:
-                //abManager.ToggleOptics();
+                abManager.ToggleOptics();
                 break;
             case ToggleType.Motor:
                 //abManager.ToggleMotor();

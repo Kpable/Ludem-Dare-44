@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Api;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,13 @@ public class AbilityManager : MonoBehaviour
     // Ability toggles
     public bool doubleJumpEnabled = false;
     public bool hoverEnabled = false;
+    public bool opticsEnabled = false;
+    public bool motorControlsEnabled = false;
 
     public JumpAbility jumpAbility;
     public HoverAbility hoverAbility;
     public DoubleJumpAbility doubleJumpAbility;
+    public OpticsAbility opticsAbility;
 
 
     // Start is called before the first frame update
@@ -21,6 +25,8 @@ public class AbilityManager : MonoBehaviour
         jumpAbility.Enabled = true;
         hoverAbility.Enabled = false;
         doubleJumpAbility.Enabled = false;
+        opticsAbility.Enabled = false;
+
 }
 
     // Update is called once per frame
@@ -66,5 +72,12 @@ public class AbilityManager : MonoBehaviour
     public bool CanHover()
     {
         return hoverEnabled;
+    }
+
+    internal void ToggleOptics()
+    {
+        Debug.Log("Optics set to: " + !opticsEnabled);
+        opticsEnabled = !opticsEnabled;
+        opticsAbility.Enabled = opticsEnabled;
     }
 }

@@ -5,13 +5,13 @@ using UnityEngine;
 public class PowerManager : MonoBehaviour
 {
     // Power Params
-    public int currentPower = 2;
-    static public int maxPower = 2;
+    public int currentPower = 4;
+    static public int maxPower = 4;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentPower = maxPower;
     }
 
     // Update is called once per frame

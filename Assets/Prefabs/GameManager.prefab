@@ -46,8 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdfee5710e2b8f94cb14b062289744ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPower: 2
-  maxPower: 2
+  currentPower: 4
 --- !u!114 &734600125607089991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,3 +87,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doubleJumpEnabled: 0
   hoverEnabled: 0
+  opticsEnabled: 0
+  motorControlsEnabled: 0
+  jumpAbility: {fileID: 0}
+  hoverAbility: {fileID: 0}
+  doubleJumpAbility: {fileID: 0}
+  opticsAbility: {fileID: 0}

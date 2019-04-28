@@ -12,6 +12,7 @@ namespace Assets.Scripts.Api
         private bool canHover = true;
         private float originalGravityScale;
         private float originalYVelocity;
+        private float DRAG_OFFSET = 3f;
 
         // Start is called before the first frame update
         void Start()
@@ -48,10 +49,12 @@ namespace Assets.Scripts.Api
                 ActiveAbility = true;
                 playerBody.gravityScale = 0;
                 originalYVelocity = playerBody.velocity.y;
+                playerBody.drag += DRAG_OFFSET;
                 playerBody.velocity = new Vector2(playerBody.velocity.x, 0);
 
                 yield return new WaitForSeconds(Clock);
 
+                playerBody.drag -= DRAG_OFFSET;
                 playerBody.gravityScale = originalGravityScale;
                 playerBody.velocity = new Vector3(playerBody.velocity.x, originalYVelocity);
                 ActiveAbility = false;

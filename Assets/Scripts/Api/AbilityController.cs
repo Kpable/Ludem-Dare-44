@@ -34,14 +34,31 @@ public class AbilityController : MonoBehaviour
         {
             if(hoverAbility.ActiveAbility == false)
             {
-                if (jumpAbility.Clock <= 0)
+                if (jumpAbility.Clock <= 0 || jumpAbility.JumpsLeft > 0)
                 {
                     jumpAbility.Activate();
-                    jumpAbility.Clock = 1f;
+                    jumpAbility.Clock = jumpAbility.DoubleJumpEnabled ? 3f : 1f;
+                }
+
+                if (jumpAbility.DoubleJumpEnabled)
+                {
+                    if (jumpAbility.JumpsLeft > 0)
+                    {
+                        jumpAbility.JumpsLeft -= 1; // Remove a jump from count
+                    }
+                    else
+                    {
+                        jumpAbility.Clock -= Time.deltaTime;
+                        jumpAbility.JumpsLeft = 2;
+                    }
+                }
+                else
+                {
+                    jumpAbility.Clock -= Time.deltaTime;
                 }
             }
         }
-        jumpAbility.Clock -= Time.deltaTime;
+        
 
         // ---- HOVER ----
         hoverAbility.Clock = 2f;

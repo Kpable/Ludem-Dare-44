@@ -11,11 +11,34 @@ public class JumpAbility : BaseAbility
     public Rigidbody2D playerBody;
     public float jumpSpeed;
     public float jumpSpeedDefault = 15; // The jump speed is set to this on Start
-    // Start is called before the first frame update
+
+    public int JumpsLeft { get; set; }
+
+    public bool DoubleJumpEnabled { get; set; }
+
+    /// <summary>
+    ///  Enable/Disables the Double Jump Ability
+    /// </summary>
+    public bool Enable
+    {
+        get
+        {
+            return DoubleJumpEnabled;
+        }
+        set
+        {
+            DoubleJumpEnabled = value;
+        }
+    }
+
+
+    // Start is called before the first frame update    
     void Start()
     {
         Enabled = true;
         jumpSpeed = jumpSpeedDefault;
+        JumpsLeft = 2;
+        DoubleJumpEnabled = true;
     }
 
     public override void SubActivate()
@@ -28,7 +51,14 @@ public class JumpAbility : BaseAbility
         }
         else
         {
-            playerBody.velocity += Vector2.up * jumpSpeed;
+            if(playerBody.velocity.y <= 0)
+            {
+                playerBody.velocity = new Vector2(playerBody.velocity.x, jumpSpeed) ;
+            }
+            else
+            {
+                playerBody.velocity += Vector2.up * jumpSpeed;
+            }
         }
         ActiveAbility = false;
     }

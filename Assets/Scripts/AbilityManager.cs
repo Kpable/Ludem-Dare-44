@@ -8,10 +8,10 @@ public class AbilityManager : MonoBehaviour
 {
 
     // Ability toggles
-    public bool doubleJumpEnabled = false;
-    public bool hoverEnabled = false;
-    public bool opticsEnabled = false;
-    public bool motorControlsEnabled = false;
+    public static bool doubleJumpEnabled = false;
+    public static bool hoverEnabled = false;
+    public static bool opticsEnabled = false;
+    public static bool motorControlsEnabled = false;
 
     public JumpAbility jumpAbility;
     public HoverAbility hoverAbility;

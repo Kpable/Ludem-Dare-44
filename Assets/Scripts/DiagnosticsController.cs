@@ -69,6 +69,7 @@ public class DiagnosticsController : MonoBehaviour
         if(Input.GetKey(KeyCode.Escape))
         {
             bringUpDiagnosticsOnLoad = true;
+            SceneTransitioner.Instance.TransitionToScene(0);
         }
     }
 

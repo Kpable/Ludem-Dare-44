@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
-public enum ToggleType { DoubleJump, Hover };
+
+public enum ToggleType { DoubleJump, Hover, Optics, Motor };
 
 public class DiagnosticsController : MonoBehaviour
 {
@@ -13,10 +15,14 @@ public class DiagnosticsController : MonoBehaviour
     public TMP_Text batteryText;
     public GameObject diagnosticsCanvas;
     public static bool bringUpDiagnosticsOnLoad = true;
+    List<Toggle> toggleList;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        toggleList = new List<Toggle>();
+
         abManager = gameObject.GetComponent<AbilityManager>();
         if(!abManager)
         {
@@ -50,6 +56,12 @@ public class DiagnosticsController : MonoBehaviour
             EnableDiagnostics();
         }
         bringUpDiagnosticsOnLoad = false;
+
+        foreach( GameObject tog in GameObject.FindGameObjectsWithTag("Toggle"))
+        {
+            toggleList.Add(tog.GetComponent<Toggle>());
+            Debug.Log(tog.name);
+        }
     }
 
     // Update is called once per frame
@@ -66,6 +78,20 @@ public class DiagnosticsController : MonoBehaviour
 
         // Update Graphic on battery
         batteryText.text = "Reserve Power Remaining: " + currentPower + " / " + maxPower;
+
+
+        foreach(Toggle tog in toggleList)
+        {
+            if(currentPower == 0)
+            {
+                tog.interactable = tog.isOn;
+            }
+            else
+            {
+                tog.interactable = true;
+            }
+        }
+        
     }
 
     public void AbilityToggle(ToggleType type, bool toggleValue)
@@ -78,6 +104,12 @@ public class DiagnosticsController : MonoBehaviour
                 break;
             case ToggleType.Hover:
                 abManager.ToggleHover();
+                break;
+            case ToggleType.Optics:
+                //abManager.ToggleOptics();
+                break;
+            case ToggleType.Motor:
+                //abManager.ToggleMotor();
                 break;
         }
 
@@ -103,6 +135,16 @@ public class DiagnosticsController : MonoBehaviour
     public void TogHover(bool toggleValue)
     {
         AbilityToggle(ToggleType.Hover, toggleValue);
+    }
+
+    public void TogOptics(bool toggleValue)
+    {
+        AbilityToggle(ToggleType.Optics, toggleValue);
+    }
+
+    public void TogMotor(bool toggleValue)
+    {
+        AbilityToggle(ToggleType.Motor, toggleValue);
     }
 
     public void StartLevel()

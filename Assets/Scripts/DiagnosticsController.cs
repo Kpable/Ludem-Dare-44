@@ -19,6 +19,7 @@ public class DiagnosticsController : MonoBehaviour
     public static bool bringUpDiagnosticsOnLoad = true;
     List<Toggle> toggleList;
     public Sprite[] batterySprites;
+    public SoundEngine sound;
 
     // Start is called before the first frame update
     void Start()
@@ -121,6 +122,7 @@ public class DiagnosticsController : MonoBehaviour
                 break;
             case ToggleType.Motor:
                 abManager.ToggleMotor();
+                
                 break;
         }
 
@@ -128,10 +130,12 @@ public class DiagnosticsController : MonoBehaviour
         if (toggleValue)
         {
             pwManager.SubtractPower(1);
+            sound.PlayBlip2();
         }
         else
         {
             pwManager.AddPower(1);
+            sound.PlayBlip();
         }
 
         // Update 
@@ -160,6 +164,7 @@ public class DiagnosticsController : MonoBehaviour
 
     public void StartLevel()
     {
+        sound.PlayVHS();
         DisableDiagnostics();
     }
 

@@ -11,6 +11,7 @@ namespace Assets.Scripts.Api
     {
         public BasicMovement playerMovement;
         public Rigidbody2D playerBody;
+        public SoundEngine sound;
 
         /// <summary>
         /// Whether or not the ability can be activated

@@ -79,6 +79,7 @@ MonoBehaviour:
   - {fileID: 592112613293883888, guid: 9112bd634cc4cd440be105dbd14d3df8, type: 3}
   - {fileID: -1720865232835478159, guid: 9112bd634cc4cd440be105dbd14d3df8, type: 3}
   - {fileID: -3017979480325208809, guid: 9112bd634cc4cd440be105dbd14d3df8, type: 3}
+  sound: {fileID: 3981254710096155211, guid: da1151c213af0bd4c96c45b42fdf853b, type: 3}
 --- !u!114 &99927302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,10 +92,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91aa8a24b5cdd343a37c4409f31a177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doubleJumpEnabled: 0
-  hoverEnabled: 0
-  opticsEnabled: 0
-  motorControlsEnabled: 0
   jumpAbility: {fileID: 0}
   hoverAbility: {fileID: 0}
   doubleJumpAbility: {fileID: 0}

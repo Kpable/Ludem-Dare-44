@@ -399,6 +399,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a833522791364841b40198f5b35a5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &257082592
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4122367344843479101, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3373698
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0439563
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -422.5024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877444484996068801, guid: da1151c213af0bd4c96c45b42fdf853b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da1151c213af0bd4c96c45b42fdf853b, type: 3}
+--- !u!114 &257082593 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3981254710096155211, guid: da1151c213af0bd4c96c45b42fdf853b,
+    type: 3}
+  m_PrefabInstance: {fileID: 257082592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3ab572ca41d95499c53387e85e60c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &281399247 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3212754000804123698, guid: 9d6f1a488911dc94ba7c7aedd4c8f58f,
@@ -1716,6 +1797,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
+        type: 3}
+      propertyPath: batteryGroup
+      value: 
+      objectReference: {fileID: 719685853}
+    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
+        type: 3}
+      propertyPath: diagnosticsCanvas
+      value: 
+      objectReference: {fileID: 1160379212}
+    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
+        type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 257082593}
     - target: {fileID: 1001085997736912892, guid: 7707da07db930ff4daf85d23163fcc9d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1771,16 +1867,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: batteryGroup
-      value: 
-      objectReference: {fileID: 719685853}
-    - target: {fileID: 3413537083579552152, guid: 7707da07db930ff4daf85d23163fcc9d,
-        type: 3}
-      propertyPath: diagnosticsCanvas
-      value: 
-      objectReference: {fileID: 1160379212}
     - target: {fileID: 99927302, guid: 7707da07db930ff4daf85d23163fcc9d, type: 3}
       propertyPath: jumpAbility
       value: 

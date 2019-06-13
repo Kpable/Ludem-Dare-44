@@ -6,7 +6,7 @@ namespace Assets.Scripts.Api
 { 
     public class HoverAbility : BaseAbility
     {
-        private bool hover = false;
+        private bool isHovering = false;
         private bool canHover = true;
         private float originalGravityScale;
         private float originalYVelocity;
@@ -18,20 +18,25 @@ namespace Assets.Scripts.Api
             originalGravityScale = playerBody.gravityScale;
         }
 
-        // Update is called once per frame
+        /// <summary>
+        /// Sets the the hovering member to true
+        /// </summary>
         public void StartHover()
         {
-            hover = true;
+            isHovering = true;
         }
 
+        /// <summary>
+        /// Launches hover coroutine after checking grounded condition and current hovering status
+        /// </summary>
         public override void SubActivate()
         {
             if(playerMovement.IsOnGround == false)
             {
-                if (hover && canHover)
+                if (isHovering && canHover)
                 {
                     StartCoroutine("HoverCoroutine");
-                    hover = canHover = false;
+                    isHovering = canHover = false;
                 }
                 else
                 {
@@ -40,13 +45,17 @@ namespace Assets.Scripts.Api
             }
         }
 
+        /// <summary>
+        /// Performs the hovering physic/logic
+        /// </summary>
+        /// <returns></returns>
         IEnumerator HoverCoroutine()
         {
             // Check if it is negative velocity
             Debug.Log(playerBody.velocity.y);
             if(playerBody.velocity.y <= 0)
             {
-                ActiveAbility = true;
+                IsActive = true;
                 playerBody.gravityScale = 0;
                 originalYVelocity = playerBody.velocity.y;
                 playerBody.drag += DRAG_OFFSET;
@@ -57,7 +66,7 @@ namespace Assets.Scripts.Api
                 playerBody.drag -= DRAG_OFFSET;
                 playerBody.gravityScale = originalGravityScale;
                 playerBody.velocity = new Vector3(playerBody.velocity.x, originalYVelocity);
-                ActiveAbility = false;
+                IsActive = false;
             }
             else
             {

@@ -18,13 +18,17 @@ namespace Assets.Scripts.Api
         /// <summary>
         /// Whether or not the ability is active
         /// </summary>
-        bool ActiveAbility { get; set; }
+        bool IsActive { get; set; }
 
+        /// <summary>
+        /// Performs the ability. Meant to be called in an update method. 
+        /// </summary>
         void Activate();
 
         /// <summary>
         /// Clock for timing within this ability
         /// </summary>
         float Clock { get; set; }
+
     }
 }

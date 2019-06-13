@@ -38,7 +38,7 @@ public class AbilityController : MonoBehaviour
         // ---- JUMP ----
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
-            if(hoverAbility.ActiveAbility == false)
+            if(hoverAbility.IsActive == false)
             {
                 jumpAbility.Activate();
                 doubleJumpAbility.Activate();

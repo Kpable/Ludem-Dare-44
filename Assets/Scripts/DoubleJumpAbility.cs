@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DoubleJumpAbility : JumpAbility
 {
+    // Remaining jump count
     public int JumpsLeft { get; set; }
 
     // Start is called before the first frame update
@@ -12,10 +13,12 @@ public class DoubleJumpAbility : JumpAbility
     {
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Performs a second vertical velocity boost if the player body is moving down 
+    /// </summary>
     public override void SubActivate()
     {
-        ActiveAbility = true;
+        IsActive = true;
         if (playerMovement.IsOnGround == false)
         {
             if (JumpsLeft > 0)
@@ -44,6 +47,6 @@ public class DoubleJumpAbility : JumpAbility
         {
             JumpsLeft = 1;
         }
-        ActiveAbility = false;
+        IsActive = false;
     }
 }

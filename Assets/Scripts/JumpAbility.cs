@@ -6,11 +6,14 @@ using UnityEngine;
 
 public class JumpAbility : BaseAbility
 {
-    public float jumpSpeed;
+    public float jumpSpeed;             // The current vertical jumping speed
     public float jumpSpeedDefault = 15; // The jump speed is set to this on Start
 
     protected Vector2 CAP_VELOCITY = new Vector2(0, 30);
 
+    /// <summary>
+    /// Constructor. Sets the default jump speed.
+    /// </summary>
     public JumpAbility()
     {
         jumpSpeed = jumpSpeedDefault;
@@ -21,9 +24,12 @@ public class JumpAbility : BaseAbility
     {
     }
 
+    /// <summary>
+    /// Performed based on the grounded status 
+    /// </summary>
     public override void SubActivate()
     {
-        ActiveAbility = true;
+        IsActive = true;
         if (playerMovement.IsOnGround)
         {
             Vector2 pVelocity = playerBody.velocity;
@@ -43,6 +49,6 @@ public class JumpAbility : BaseAbility
                 }
             }
         }
-        ActiveAbility = false;
+        IsActive = false;
     }
 }

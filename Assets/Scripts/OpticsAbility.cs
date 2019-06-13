@@ -6,7 +6,14 @@ namespace Assets.Scripts.Api
 {
     public class OpticsAbility : BaseAbility
     {
-        public bool Enabled { get { return enabled; }
+        public GameObject optics;
+
+        /// <summary>
+        /// Uses the unity engine <see cref="Behaviour.enabled"/> to set it's enabled status
+        /// </summary>
+        public new bool Enabled
+        {
+            get { return enabled; }
             set
             {
                 enabled = value;
@@ -14,7 +21,6 @@ namespace Assets.Scripts.Api
             }
         }
 
-        public GameObject optics;
 
         // Start is called before the first frame update
         void Start()

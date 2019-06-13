@@ -21,15 +21,24 @@ namespace Assets.Scripts.Api
         /// <summary>
         /// Whether or not the ability is active
         /// </summary>
-        public bool ActiveAbility { get; set; }
+        public bool IsActive { get; set; }
 
+        /// <summary>
+        /// Holds related clock information
+        /// </summary>
         public float Clock { get; set; }
 
+        /// <summary>
+        /// Constructor. Sets <seealso cref="IsActive"/> to false.
+        /// </summary>
         public BaseAbility()
         {
-            ActiveAbility = false;
+            IsActive = false;
         }
 
+        /// <summary>
+        /// Executes the ability if the ability <seealso cref="Enabled"/> == true
+        /// </summary>
         public void Activate()
         {
             if (Enabled)
@@ -39,8 +48,9 @@ namespace Assets.Scripts.Api
         }
 
         /// <summary>
-        /// This is called within a FixedUpdate function from the controller
+        /// This is called within a FixedUpdate function from the controller.
         /// </summary>
+        /// <exception cref="NotImplementedException"></exception>
         virtual public void SubActivate()
         {
             throw new NotImplementedException("Sub Abilities should override this function");

@@ -9,6 +9,9 @@ public class MotorControlDisAbility : BaseAbility
     const float SHOCK_TIMEOUT = 5f;
     float shockCountdown = 5f;
 
+    /// <summary>
+    /// Flag to check if the shock feature of this ability is active
+    /// </summary>
     public bool ShockEnabled { get; set; }
 
     // Start is called before the first frame update
@@ -18,9 +21,12 @@ public class MotorControlDisAbility : BaseAbility
         ShockEnabled = false;
     }
 
+    /// <summary>
+    /// Performs timing countdown for when to imobilize playerbody
+    /// </summary>
     public override void SubActivate()
     {
-        ActiveAbility = true;
+        IsActive = true;
         if (Clock <= 0)
         {
             ShockEnabled = true; // Enable shocking period
@@ -42,6 +48,6 @@ public class MotorControlDisAbility : BaseAbility
                 Clock -= Time.deltaTime;
             }
         }
-        ActiveAbility = false;
+        IsActive = false;
     }
 }
